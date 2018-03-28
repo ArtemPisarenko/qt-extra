@@ -15,15 +15,18 @@ Modules breaking generally follows Qt modules or features breaking.
 For example, "core" module is relevant to pure QtCore functionality.
 
 ## Documentation
-All documentation presented in source code in doxygen format.
+All documentation presented in source code in doxygen format.  
+See *.md files and c++ header files in source tree.  
 
 ## Usage
 Each module used by:
 * including corresponding *.pri file to your qmake project (if it exists)
 * and #including relevant headers in its directory (except for *_p.h).
+All modules APIs are placed in "QtExtra" namespace.
+Preprocessor macro names are prefixed with "QT" for brevity (hoping to avoid conflicting with Qt namespace).
 
 ## Limitations
-Qt versions 5.5 or later are supported.  
-Code have to be built with minumum "C++11" mode.  
+Qt versions 5.7 or later are supported.  
+Code have to be built with minimum "C++11" mode.  
 Tested on linux x86_64 platform with gcc 5.4.0.  
 

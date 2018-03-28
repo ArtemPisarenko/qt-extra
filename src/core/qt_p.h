@@ -8,6 +8,11 @@
 #ifndef QTEXTRA_QT_P_H
 #define QTEXTRA_QT_P_H
 
+#include <qglobal.h>
+#if (QT_VERSION < QT_VERSION_CHECK(5, 7, 0))
+# error "Qt version 5.7 or later required"
+#endif
+
 #define QTEXTRA_ARG(c) QTEXTRA_ARG_ ## c
 #define QTEXTRA_ARG_qarg(type, value) Q_ARG(type, value)
 #define QTEXTRA_ARG_t(type, value) type

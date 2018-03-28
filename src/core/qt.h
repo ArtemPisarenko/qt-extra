@@ -8,8 +8,8 @@
 #ifndef QTEXTRA_QT_H
 #define QTEXTRA_QT_H
 
-#include <qmetaobject.h>
 #include "qt_p.h"
+#include <qmetaobject.h>
 
 /**
  * \defgroup QTMETAMETHOD_INVOKE QMetaObject::invokeMethod wrappers
@@ -41,7 +41,7 @@
  * These macros doesn't require form user explicit specialization for invoking overloaded variants calls.
  * It's automatically deduced from argument types user provided.
  *
- * Special parameters "ret" and "val<n>" must be passed as pair of type and value in parentheses. Type must match exacttly as defined in invokable method
+ * Special parameters "ret" and "val<n>" must be passed as pair of type and value in parentheses. Type must match exactly as defined in invokable method.
  * Parameter "member" must contain exactly and only method name without any casting or extra symbols (because it's stringified in macro expansion).
  *
  * Example usage:
